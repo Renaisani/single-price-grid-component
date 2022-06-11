@@ -28,6 +28,7 @@
     border-top-left-radius: $BorderRadius;
     padding-top: $TopPadding;
     padding-left: $SidePadding;
+    padding-right: $SidePadding;
     grid-area: join;
     h2 {
         color: hsl(179, 62%, 43%);
@@ -100,7 +101,6 @@
     padding-top: $TopPadding;
     padding-left: $SidePadding;
     grid-area: explanation;
-    font-size: small;
     color: $LightTextColor;
     h2 {
         font-size: $SubHeadText;

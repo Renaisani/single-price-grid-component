@@ -1,0 +1,57 @@
+@media only screen and (max-width: 650px) {
+    .grid {
+        place-items: start;
+        justify-items: center;
+        padding-top: 65px;
+    }
+    .innerGrid {
+        grid-template-columns: 1fr;
+        grid-template-rows: .9fr 1.1fr .9fr;
+        grid-template-areas: 
+        "join"
+        "subscription"
+        "explanation";
+        width: 320px;
+        height: 705px;
+        border-radius: $MobileBorder;
+        box-shadow: -1px 10px 30px 11px rgba(0, 0, 0, 0.102);
+    }
+    .join {
+        border-top-left-radius: $MobileBorder;
+        border-top-right-radius: $MobileBorder;
+        padding-top: $MobileTopPad;
+        padding-left: $MobileSidePad;
+        padding-right: 28px;
+        h2 {
+            font-size: 20px;
+        }
+        h3 {
+            font-size: 15px;
+            margin-bottom: 14px;
+        }
+        .body-copy {
+            font-size: 14px;
+            margin-bottom: 37px;
+        }
+    }
+    .subscription {
+        border-bottom-left-radius: 0;
+        padding-top: $MobileTopPad;
+        padding-left: $MobileSidePad;
+        p {
+            margin-bottom: 13px;
+        }
+        button {
+            width: 270px;
+            margin-bottom: 22px;
+        }
+    }
+    .explanation {
+        border-bottom-left-radius: $MobileBorder;
+        padding-top: $MobileTopPad;
+        padding-left: $MobileSidePad;
+        .list {
+            margin-bottom: 19px;
+        }
+    }
+}

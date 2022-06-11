@@ -32,6 +32,7 @@
   border-top-left-radius: 10px;
   padding-top: 23px;
   padding-left: 40px;
+  padding-right: 40px;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -119,7 +120,6 @@
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: explanation;
-  font-size: small;
   color: #e5eff5;
 }
 
@@ -132,6 +132,64 @@
   color: #b0e8e6;
   padding-top: 5px;
   line-height: 1.35rem;
+}
+
+@media only screen and (max-width: 650px) {
+  .grid {
+    place-items: start;
+    justify-items: center;
+    padding-top: 65px;
+  }
+  .innerGrid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: .9fr 1.1fr .9fr;
+        grid-template-rows: .9fr 1.1fr .9fr;
+        grid-template-areas: "join" "subscription" "explanation";
+    width: 320px;
+    height: 705px;
+    border-radius: 5px;
+    -webkit-box-shadow: -1px 10px 30px 11px rgba(0, 0, 0, 0.102);
+            box-shadow: -1px 10px 30px 11px rgba(0, 0, 0, 0.102);
+  }
+  .join {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-top: 8px;
+    padding-left: 25px;
+    padding-right: 28px;
+  }
+  .join h2 {
+    font-size: 20px;
+  }
+  .join h3 {
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+  .join .body-copy {
+    font-size: 14px;
+    margin-bottom: 37px;
+  }
+  .subscription {
+    border-bottom-left-radius: 0;
+    padding-top: 8px;
+    padding-left: 25px;
+  }
+  .subscription p {
+    margin-bottom: 13px;
+  }
+  .subscription button {
+    width: 270px;
+    margin-bottom: 22px;
+  }
+  .explanation {
+    border-bottom-left-radius: 5px;
+    padding-top: 8px;
+    padding-left: 25px;
+  }
+  .explanation .list {
+    margin-bottom: 19px;
+  }
 }
 
 footer {
