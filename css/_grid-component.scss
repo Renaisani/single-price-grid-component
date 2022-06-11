@@ -1,0 +1,114 @@
+.grid {
+    display: grid;
+    min-height: inherit;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+.innerGrid {
+    display: grid;
+    width: 650px;
+    height: 480px;
+    border-radius: $BorderRadius;
+    box-shadow: 1px 1px 30px 3px rgba(0, 0, 0, 0.102);
+    grid-template-columns: .98fr 1.02fr;
+    grid-template-rows: .9fr 1.1fr;
+    grid-template-areas: 
+    "join join"
+    "subscription explanation";
+}
+
+.container {
+    font-family: 'Karla', sans-serif;
+}
+
+.join {
+    background-color: white;
+    border-top-right-radius: $BorderRadius;
+    border-top-left-radius: $BorderRadius;
+    padding-top: $TopPadding;
+    padding-left: $SidePadding;
+    grid-area: join;
+    h2 {
+        color: hsl(179, 62%, 43%);
+        margin-bottom: 0;
+    }
+    h3 {
+        color: hsl(71, 73%, 54%);
+        font-size: $SubHeadText;
+        margin-top: 24px;
+        margin-bottom: 10px;
+    }
+    .body-copy {
+        color: hsl(228, 6%, 72%);
+        line-height: 1.6rem;
+        font-size: $BodyCopy;
+        font-weight: 400;
+    }
+}
+
+.subscription {
+    background-color: hsl(179, 62%, 43%);
+    border-bottom-left-radius: $BorderRadius;
+    padding-top: $TopPadding;
+    padding-left: $SidePadding;
+    grid-area: subscription;
+    color: $LightTextColor;
+    h2 {
+        font-size: $SubHeadText;
+    }
+    .price {
+        padding-top: 5px;
+        font-size: 33px;
+        font-weight: 700;
+        span {
+            font-size: $BodyCopy;
+            font-weight: 400;
+            color: hsl(180, 50%, 67%);
+        }
+    }
+    p {
+        margin-top: 8px;
+        font-size: $BodyCopy;
+    }
+    button {
+        background-color: hsl(71, 73%, 54%);
+        color: white;
+        font-size: $BodyCopy;
+        font-family: Geneva;
+        font-weight: 700;
+        height: 49px;
+        width: 240px;
+        margin-top: 18px;
+        border-top-width: 0;
+        border-right-width: 0;
+        border-bottom-width: 0;
+        border-left-width: 0;
+        border-top-style: none;
+        border-right-style: none;
+        border-bottom-style: none;
+        border-left-style: none;
+        border-radius: 5px;
+        box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.102);
+    }
+    
+}
+
+.explanation {
+    background-color: #4abebd;
+    border-bottom-right-radius: $BorderRadius;
+    padding-top: $TopPadding;
+    padding-left: $SidePadding;
+    grid-area: explanation;
+    font-size: small;
+    color: $LightTextColor;
+    h2 {
+        font-size: $SubHeadText;
+    }
+    .list {
+        font-size: 14px;
+        color: hsl(178, 55%, 80%);
+        padding-top: 5px;
+        line-height: 1.35rem;
+    }
+}

@@ -1,8 +1,3 @@
-body {
-  min-height: 100vh;
-  background-color: #e5eff5;
-}
-
 .grid {
   display: -ms-grid;
   display: grid;
@@ -15,10 +10,16 @@ body {
 .innerGrid {
   display: -ms-grid;
   display: grid;
-  width: 635px;
+  width: 650px;
   height: 480px;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 30px 3px rgba(0, 0, 0, 0.102);
+          box-shadow: 1px 1px 30px 3px rgba(0, 0, 0, 0.102);
+  -ms-grid-columns: .98fr 1.02fr;
+      grid-template-columns: .98fr 1.02fr;
+  -ms-grid-rows: .9fr 1.1fr;
+      grid-template-rows: .9fr 1.1fr;
+      grid-template-areas: "join join" "subscription explanation";
 }
 
 .container {
@@ -27,28 +28,110 @@ body {
 
 .join {
   background-color: white;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding-top: 23px;
+  padding-left: 40px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: join;
 }
 
-.join h1 {
+.join h2 {
   color: #2ab2af;
+  margin-bottom: 0;
 }
 
 .join h3 {
   color: #c0df34;
+  font-size: 18px;
+  margin-top: 24px;
+  margin-bottom: 10px;
 }
 
-.join p {
-  color: #98a6bd;
+.join .body-copy {
+  color: #b3b5bc;
+  line-height: 1.6rem;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .subscription {
   background-color: #2ab2af;
+  border-bottom-left-radius: 10px;
+  padding-top: 23px;
+  padding-left: 40px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: subscription;
   color: #e5eff5;
+}
+
+.subscription h2 {
+  font-size: 18px;
+}
+
+.subscription .price {
+  padding-top: 5px;
+  font-size: 33px;
+  font-weight: 700;
+}
+
+.subscription .price span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #81d5d5;
+}
+
+.subscription p {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.subscription button {
+  background-color: #c0df34;
+  color: white;
+  font-size: 16px;
+  font-family: Geneva;
+  font-weight: 700;
+  height: 49px;
+  width: 240px;
+  margin-top: 18px;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.102);
+          box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.102);
 }
 
 .explanation {
   background-color: #4abebd;
+  border-bottom-right-radius: 10px;
+  padding-top: 23px;
+  padding-left: 40px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: explanation;
+  font-size: small;
   color: #e5eff5;
+}
+
+.explanation h2 {
+  font-size: 18px;
+}
+
+.explanation .list {
+  font-size: 14px;
+  color: #b0e8e6;
+  padding-top: 5px;
+  line-height: 1.35rem;
 }
 
 footer {
@@ -62,5 +145,10 @@ footer {
 
 .attribution a {
   color: #3e52a3;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #e5eff5;
 }
 /*# sourceMappingURL=styles.css.map */
