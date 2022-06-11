@@ -1,8 +1,66 @@
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
+body {
+  min-height: 100vh;
+  background-color: #e5eff5;
 }
 
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+.grid {
+  display: -ms-grid;
+  display: grid;
+  min-height: inherit;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  place-items: center;
 }
+
+.innerGrid {
+  display: -ms-grid;
+  display: grid;
+  width: 635px;
+  height: 480px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.container {
+  font-family: 'Karla', sans-serif;
+}
+
+.join {
+  background-color: white;
+}
+
+.join h1 {
+  color: #2ab2af;
+}
+
+.join h3 {
+  color: #c0df34;
+}
+
+.join p {
+  color: #98a6bd;
+}
+
+.subscription {
+  background-color: #2ab2af;
+  color: #e5eff5;
+}
+
+.explanation {
+  background-color: #4abebd;
+  color: #e5eff5;
+}
+
+footer {
+  top: 90%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=styles.css.map */
