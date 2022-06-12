@@ -190,6 +190,9 @@
   .explanation .list {
     margin-bottom: 19px;
   }
+  footer {
+    margin-top: 30px;
+  }
 }
 
 footer {
